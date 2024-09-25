@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "496824088732",
+    "project_id": "invoicemanagerapp-77e58",
+    "storage_bucket": "invoicemanagerapp-77e58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496824088732:android:4a1215c7a4f8385c825559",
+        "android_client_info": {
+          "package_name": "com.example.invoicemanagergrupotorres"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496824088732-84m9bohr8aeji756eu3kguuavi56ou9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBIiEaUxB2sV1nhRVnNBfLksu8mpzIy1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496824088732-84m9bohr8aeji756eu3kguuavi56ou9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
