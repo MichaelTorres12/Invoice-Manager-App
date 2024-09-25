@@ -4,6 +4,7 @@ import android.util.Log
 import com.example.invoicemanagergrupotorres.data.models.InvoiceData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.tasks.await
 
 fun saveInvoiceData(
     invoiceData: InvoiceData,
@@ -30,6 +31,25 @@ fun saveInvoiceData(
     } else {
         Log.e("FirestoreRepository", "Usuario no autenticado")
         onFailure(Exception("Usuario no autenticado"))
+    }
+}
+
+suspend fun getInvoicesForCurrentUser(): List<InvoiceData> {
+    val db = FirebaseFirestore.getInstance()
+    val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+    if (userId != null) {
+        val snapshot = db.collection("users")
+            .document(userId)
+            .collection("invoices")
+            .get()
+            .await()
+
+        return snapshot.documents.mapNotNull { document ->
+            document.toObject(InvoiceData::class.java)
+        }
+    } else {
+        throw Exception("Usuario no autenticado")
     }
 }
 

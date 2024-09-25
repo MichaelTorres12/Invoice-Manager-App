@@ -35,6 +35,6 @@ fun SignInScreen(onSignInSuccess: () -> Unit) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Aquí puedes agregar componentes para inicio de sesión con email/contraseña
+        // Aquí podriamos agregar componentes para inicio de sesión con email/contraseña
     }
 }
